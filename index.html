@@ -12,8 +12,9 @@
     </nav>
     <main>
         <h2>Vacation Contest Sign-Up Form</h2>
-        <h5>* Indicates a required field</h5>
-        <form method="GET" action="results.html"> <!-- TODO: Set Action and Method Properties -->
+        <h5>* Indicates a required field</h5> <!--visual defintion for users of the * behind labels-->
+        <!-- TODO: Set Action and Method Properties -->
+        <form method="GET" action="results.html">
             <div>
                 <div>
                     <label for="firstname">Your First Name</label>
@@ -42,7 +43,7 @@
                     <div>
                         <label for="email">Your Email</label>
                         <span class="required-field">*</span>
-                        <input type="text" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required> <!--edited from type="text" to specify email-->
                     </div>
                     <div>
                         <label for="address">Your Street Address</label>
@@ -52,7 +53,7 @@
                         <label for="city">Your City</label>
                         <input type="text" id="city" name="city">
                     </div>
-                    <div>
+                    <div> <!--I'd love to put all the states, but that seemd a bit much for a fake vacation lottery, especially since the address isn't required information-->
                         <label for="state">Your State</label>
                         <select id="state" name="state">
                             <option value="AK">Alaska</option>
@@ -70,7 +71,7 @@
                             <option value="WA">Washington</option>
                         </select>
                     </div>
-                    <!-- Just trying out the Datalist
+                    <!-- Just trying out the Datalist type, keeping for later reference in other projects
                     <div>
                         <label for="state-list">Your State 2</label>
                         <input name="state2" list="state-list">
@@ -93,7 +94,8 @@
                     -->
                     <div>
                         <label for="zip">Your Zip</label>
-                        <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="5-Digit US Zip Code">
+                        <span class="required-field">*</span>
+                        <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="5-Digit US Zip Code"> <!--example of setting specifc characters and lengths inside of a text type-->
                     </div>
             </fieldset>
             <!-- TODO: Second fieldset -->
@@ -121,14 +123,14 @@
                             <input type="radio" id="new-zealand" name="location" value="New Zealand">
                         </div>
                     <br>
-                    <div>
+                    <div> <!--Guess I should start practicing looking at the starter code earlier, took me an embarrassing amount of time to realize this wasn't useless info, and was being used on the results page-->
                         <label for="color">Choose Your Favorite Color</label>
                         <input type="color" id="color" name="color">
                     </div>
                     <br>
-                    Add-Ons <!--checkbox cascades, instead of being a vertical orientation like the radio button; this is a work around-->
+                    Add-Ons <!--checkbox in HTML cascades, instead of being a vertical orientation like the radio button; this is a work around (continued in CSS)-->
                         <ul>
-                            <li>
+                            <li> <!--seemed a bit much to add more, since this whole lottery is a sham-->
                                 <div>
                                     <label for="sauna">Sauna</label>
                                     <input type="checkbox" id="sauna" name="extras">
