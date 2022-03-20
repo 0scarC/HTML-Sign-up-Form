@@ -12,23 +12,144 @@
     </nav>
     <main>
         <h2>Vacation Contest Sign-Up Form</h2>
-        <form> <!-- TODO: Set Action and Method Properties -->
+        <h5>* Indicates a required field</h5>
+        <form method="GET" action="results.html"> <!-- TODO: Set Action and Method Properties -->
             <div>
-                <label for="firstname">Your First Name</label>
-                <input type="text" id="firstname" name="firstname">
-                <!-- TODO: Create a "lastname" input with type "text" -->
+                <div>
+                    <label for="firstname">Your First Name</label>
+                    <span class="required-field">*</span>
+                    <input type="text" id="firstname" name="firstname" minlength="2" maxlength="35" required>             
+                </div>    
+                <div>    
+                    <!-- TODO: Create a "lastname" input with type "text" -->
+                    <label for="lastname">Your Last Name</label>
+                    <span class="required-field">*</span>
+                    <input type="text" id="lastname" name="lastname" minlength="2" maxlength="35" required>
+                </div>
+                <div>
+                    <label for="age">Your Age</label>
+                    <span class="required-field">*</span>
+                    <input type="number" id="age" name="age" min="21" max="120" required>
+                    <h5>One must be age 21 or older to enter the contest</h5>
+                </div>
             </div>
             <!-- TODO: Make fieldset and legend -->
             <!-- Todo: Email Input -->
             <!-- Todo: Street Address Input -->
             <!-- Todo: City, State, and Zip Inputs -->
-
+            <fieldset>
+                <legend>Your Contact Info</legend>
+                    <div>
+                        <label for="email">Your Email</label>
+                        <span class="required-field">*</span>
+                        <input type="text" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="address">Your Street Address</label>
+                        <input type="text" id="address" name="address">
+                    </div>
+                    <div>
+                        <label for="city">Your City</label>
+                        <input type="text" id="city" name="city">
+                    </div>
+                    <div>
+                        <label for="state">Your State</label>
+                        <select id="state" name="state">
+                            <option value="AK">Alaska</option>
+                            <option value="CO">Colorado</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="TX">Texas</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                        </select>
+                    </div>
+                    <!-- Just trying out the Datalist
+                    <div>
+                        <label for="state-list">Your State 2</label>
+                        <input name="state2" list="state-list">
+                        <datalist id="state-list" name="state2">
+                            <option value="AK">Alaska</option>
+                            <option value="CO">Colorado</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="TX">Texas</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                        </datalist>
+                    </div>
+                    -->
+                    <div>
+                        <label for="zip">Your Zip</label>
+                        <input type="text" id="zip" name="zip" pattern="[0-9]{5}" title="5-Digit US Zip Code">
+                    </div>
+            </fieldset>
             <!-- TODO: Second fieldset -->
             <!-- TODO: Radio buttons for selecting preferred destination -->
             <!-- TODO: Color input for selecting favorite color -->
             <!-- TODO: Checkboxes for selecting extra add-ons -->
-            
+            <fieldset>
+                <legend>Your Preferences</legend>
+                    Choose Your Location
+                        <div>
+                            <label for="aruba">Aruba</label>
+                            <input type="radio" id="aruba" name="location" value="Aruba" checked>
+                        </div>
+                        <div>
+                            <label for="japan">Japan</label>
+                            <input type="radio" id="japan" name="location"
+                            value="Japan">
+                        </div>
+                        <div>
+                            <label for="reykjavik">Reykjavik</label>
+                            <input type="radio" id="reykjavik" name="location" value="Reykjavik">
+                        </div>
+                        <div>
+                            <label for="new-zealand">New Zealand</label>
+                            <input type="radio" id="new-zealand" name="location" value="New Zealand">
+                        </div>
+                    <br>
+                    <div>
+                        <label for="color">Choose Your Favorite Color</label>
+                        <input type="color" id="color" name="color">
+                    </div>
+                    <br>
+                    Add-Ons <!--checkbox cascades, instead of being a vertical orientation like the radio button; this is a work around-->
+                        <ul>
+                            <li>
+                                <div>
+                                    <label for="sauna">Sauna</label>
+                                    <input type="checkbox" id="sauna" name="extras">
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label for="hot-tub">Hot Tub (In-Room)</label>
+                                    <input type="checkbox" id="hot-tub" name="extras">
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <label for="massage">Massage</label>
+                                    <input type="checkbox" id="massage" name="extras">
+                                </div>
+                            </li>
+                        </ul>
+            </fieldset>
             <!-- TODO: Submit Button -->
+            <input type="submit" value="Enter the Contest">
         </form>
     </main>
     <footer>

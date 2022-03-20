@@ -53,6 +53,16 @@ legend {
 
 fieldset {
     margin: 20px 0;
+    
+}
+
+ul {
+    margin-top: -0.1%;
+}
+
+li {
+    overflow: hidden;
+    margin-left: -9%;
 }
 
 input[type='submit'] {
@@ -60,9 +70,9 @@ input[type='submit'] {
 }
 
 input[type='radio'],
-input[type='checkbox'],
-label {
+input[type='checkbox'] {
     width: auto;
+    float: left;
 }
 
 .mini-image {
